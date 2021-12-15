@@ -1,0 +1,44 @@
+<div class="row">
+    <div class="col-md-6 offset-3">
+        <div class="form-wrapper" [ngClass]="{'error-border': isError }">
+            <form [formGroup]="form" (ngSubmit)="onSubmit()" class="p-t-10">
+                <div class="form-group">
+                <label for="empId">Employee ID</label>
+                <input
+                    type="number"
+                    id="empId"
+                    class="form-control"
+                    ngModel
+                    name="empId"
+                    required
+                    [formControlName]="'empId'"
+                />
+                </div>
+                <div class="form-group">
+                <label for="password">Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    class="form-control"
+                    ngModel
+                    name="password"
+                    required
+                    minlength="4"
+                    [formControlName]="'password'"
+                />
+                </div>
+                <div class="text-center">
+                <button
+                    class="btn btn-primary"
+                    type="submit"
+                    [disabled]="!form.valid">
+                    Login
+                </button>
+                </div>
+            </form>
+        </div>
+        <!-- <div style="visibility: hidden;"  [[ngStyle]="{'visibility': expression}"]="{'error-border': isError }">
+            <span *ngIf="isError" style="position: absolute;"> error</span>
+        </div> -->
+    </div>
+</div>

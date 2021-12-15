@@ -1,0 +1,40 @@
+<router-outlet></router-outlet>
+
+<div *ngIf="router.url === '/employee'">
+    <div class="row">
+        <div class="col-md-1 offset-1">
+            <img class="person" src="assets/images/person.png" alt="">
+        </div>
+        <div class="col-md-3 edit-emp">
+            <button type="button" class="btn btn-success" [routerLink]="['/employee/update']" >Edit</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2 offset-1">
+            Name
+        </div>
+        <div class="col-md-2">
+            {{ loggedInEmp.firstName }} {{ loggedInEmp.lastName }}
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-2 offset-1">
+            Phone Number
+        </div>
+        <div class="col-md-2">
+            {{ loggedInEmp.phoneNumber }}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2 offset-1">
+            Email
+        </div>
+        <div class="col-md-2">
+            {{ loggedInEmp.email }}
+        </div>
+    </div>
+</div>
+
+

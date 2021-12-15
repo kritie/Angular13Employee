@@ -1,0 +1,39 @@
+<div class="row employee-title">
+    <div class="col-md-6 offset-5">Employee Information</div>
+</div>
+<div class="row">
+    <div class="col-md-8 offset-2">
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                <td>Name</td>
+                <td>Designation</td>
+                <td>Phone Number</td>
+                <td>Email</td>
+                <td>Action</td>
+              </tr>
+              <tr>
+                <td><input type="text" placeholder="Enter search text" (input)="filterBy('name', $event)"/></td>
+                <td><input type="text" placeholder="Enter search text" (input)="filterBy('designation', $event)"/></td>
+                <td></td>
+                <td><input type="text" placeholder="Enter search text" (input)="filterBy('email', $event)"/></td>
+                <td></td>
+              </tr>
+            </thead>
+            <tbody>
+               <tr *ngFor="let employee of employees | search:searchText:key" optionHighlighter>
+                  <td>{{employee.firstName}} {{employee.lastName}}</td>
+                  <td>{{employee.designation}}</td>
+                  <td>{{employee.phoneNumber}}</td>
+                  <td>{{employee.email}}</td>
+                  <td> 
+                    <a class="btn btn-danger btn-sm" (click)="deleteEmployee(employee.id)">Delete</a>
+                </td>
+               </tr>
+               
+            </tbody>
+           
+          </table>
+    </div>
+</div>
+

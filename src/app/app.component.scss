@@ -1,0 +1,9 @@
+:host ::ng-deep  router-outlet + * {
+    //  flex:1
+    margin-bottom: 70px;
+}
+
+.app-wrapper {
+    display: flex;
+    flex-direction: column;
+}

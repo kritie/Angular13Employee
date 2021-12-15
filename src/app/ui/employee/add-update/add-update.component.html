@@ -1,0 +1,178 @@
+<router-outlet></router-outlet>
+
+<div class="row" *ngIf="router.url === '/employee/new'">
+    <div class="col-md-6 offset-3">
+        <div class="form-wrapper" [ngClass]="{'error-border': isError }">
+            <form [formGroup]="form" (ngSubmit)="onSubmit()" class="p-t-10">
+                <div class="row">
+                    <div class="form-group col-md-4 offset-1">
+                        <label for="firstName">First Name</label>
+                        <input
+                            type="text"
+                            id="firstName"
+                            class="form-control"
+                            ngModel
+                            name="firstName"
+                            required
+                            minlength="3"
+                            [formControlName]="'firstName'"
+                        />
+                    </div>
+                    <div class="form-group col-md-4 offset-1">
+                        <label for="lastName">Last Name</label>
+                        <input
+                            type="text"
+                            id="lastName"
+                            class="form-control"
+                            ngModel
+                            name="lastName"
+                            required
+                            minlength="3"
+                            [formControlName]="'lastName'"
+                        />
+                    </div>
+                </div>
+               <div class="row">
+                <div class="form-group col-md-4 offset-1">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input
+                        type="tel"
+                        id="phoneNumber"
+                        class="form-control"
+                        ngModel
+                        name="phoneNumber"
+                        required
+                        minlength="9"
+                        [formControlName]="'phoneNumber'"
+                    />
+                </div>
+                <div class="form-group col-md-4 offset-1">
+                    <label for="designation">Designation</label>
+                    <input
+                        type="text"
+                        id="designation"
+                        class="form-control"
+                        ngModel
+                        name="designation"
+                        required
+                        minlength="4"
+                        [formControlName]="'designation'"
+                    />
+                </div>
+               </div>
+               <div class="row">
+                <div class="form-group col-md-4 offset-1">
+                    <label for="phoneNumber">Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        class="form-control"
+                        ngModel
+                        name="email"
+                        required
+                        minlength="9"
+                        [formControlName]="'email'"
+                    />
+                </div>
+               </div>
+              <div class="row">
+                <div class="text-center col-md-6 offset-2 form-btn">
+                    <button
+                        class="btn btn-primary"
+                        type="submit"
+                        [disabled]="!form.valid">
+                        Add
+                    </button>
+                </div>
+              </div>
+               
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="row" *ngIf="router.url === '/employee/update'">
+    <div class="col-md-6 offset-3">
+        <div class="form-wrapper" [ngClass]="{'error-border': isError }">
+            <form [formGroup]="form" (ngSubmit)="onSubmit()" class="p-t-10">
+                <div class="row">
+                    <div class="form-group col-md-4 offset-1">
+                        <label for="firstName">First Name</label>
+                        <input
+                            type="text"
+                            id="firstName"
+                            class="form-control"
+                            name="firstName"
+                            required
+                            minlength="3"
+                            [formControlName]="'firstName'"
+                        />
+                    </div>
+                    <div class="form-group col-md-4 offset-1">
+                        <label for="lastName">Last Name</label>
+                        <input
+                            type="text"
+                            id="lastName"
+                            class="form-control"
+                            name="lastName"
+                            required
+                            minlength="3"
+                            [formControlName]="'lastName'"
+                        />
+                    </div>
+                </div>
+               <div class="row">
+                <div class="form-group col-md-4 offset-1">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input
+                        type="tel"
+                        id="phoneNumber"
+                        class="form-control"
+                        name="phoneNumber"
+                        required
+                        minlength="9"
+                        [formControlName]="'phoneNumber'"
+                    />
+                </div>
+                <div class="form-group col-md-4 offset-1">
+                    <label for="designation">Designation</label>
+                    <input
+                        type="text"
+                        id="designation"
+                        class="form-control"
+                        name="designation"
+                        required
+                        minlength="4"
+                        [formControlName]="'designation'"
+                    />
+                </div>
+               </div>
+               <div class="row">
+                <div class="form-group col-md-4 offset-1">
+                    <label for="phoneNumber">Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        class="form-control"
+                        name="email"
+                        required
+                        minlength="9"
+                        [formControlName]="'email'"
+                    />
+                </div>
+               </div>
+              <div class="row">
+                <div class="text-center col-md-6 offset-2 form-btn">
+                    <button
+                        class="btn btn-primary"
+                        type="submit"
+                        [disabled]="!form.valid">
+                        Update
+                    </button>
+                </div>
+              </div>
+               
+            </form>
+        </div>
+    </div>
+</div>

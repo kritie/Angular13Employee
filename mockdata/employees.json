@@ -1,0 +1,56 @@
+[
+    {
+        "id": 11,
+        "firstName": "John",
+        "lastName": "Doe",
+        "phoneNumber": "408-1234567",
+        "password": "John@11",
+        "designation": "Software Engineer",
+        "email": "john@yahoo.in"
+    },
+    {
+        "id": 12,
+        "firstName": "Jimmy",
+        "lastName": "Fin",
+        "phoneNumber": "408-1234567",
+        "password": "Jimmy@12",
+        "designation": "Business Analyst",
+        "email": "jimmy@yahoo.in"
+    },
+    {
+        "id": 13,
+        "firstName": "Harry",
+        "lastName": "Styles",
+        "phoneNumber": "408-1234567",
+        "password": "Harry@13",
+        "designation": "Automation Lead",
+        "email": "harry@yahoo.in"
+    },
+    {
+        "id": 14,
+        "firstName": "Nick",
+        "lastName": "Jonas",
+        "phoneNumber": "408-1234567",
+        "password": "Nick@14",
+        "designation": "Program Manager",
+        "email": "nick@yahoo.in"
+    },
+    {
+        "id": 15,
+        "firstName": "Tom",
+        "lastName": "Hanks",
+        "phoneNumber": "408-1234567",
+        "password": "Tom@15",
+        "designation": "Devops Engineer",
+        "email": "tom@yahoo.in"
+    },
+    {
+        "id": 16,
+        "firstName": "Kie",
+        "lastName": "Zi",
+        "phoneNumber": "408-1234567",
+        "password": "Kie@16",
+        "designation": "Product Owner",
+        "email": "kie@yahoo.in"
+    }
+]
